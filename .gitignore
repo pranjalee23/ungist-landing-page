@@ -7,8 +7,8 @@
 #*.html
 #!src/*.html
 
-#ignore built package
-!public/
+#ignore build package
+public/
 
 # ignore all files starting with .
 .*
@@ -63,9 +63,14 @@ node_modules/
 dist
 dist-ssr
 *.local
+package-lock.json
 
 # track gulp settings
 !gulpfile.js
+
+# ignore all images
+images/
+/images/
 
 # ignore editor directories and files
 .vscode/*
