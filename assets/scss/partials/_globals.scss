@@ -1,3 +1,18 @@
 // Icons & Fonts
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.custom-bg-circle {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 22px;
+  top: 12px;
+  left: 0px;
+  background: $primary-light2;
+  // background-size: 24px 24px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: -1;
+  @include transform(rotate(-130deg));
+}

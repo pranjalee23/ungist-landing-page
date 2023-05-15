@@ -1,8 +1,77 @@
 /* Hero */
 
-#homepage-wrapper #hero-wrapper .hero-copy {
-  font-family: "Work Sans", sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.4;
+#hero-wrapper {
+  background-image: url("../images/hero-image.png ");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 110px);
+  display: flex;
+
+  .row {
+    height: 100%;
+
+    .hero-copy {
+      @include WorkSans;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      color: $white-text;
+
+      .hero-copy-head,
+      .hero-copy-sub {
+        padding-bottom: 24px;
+      }
+
+      .hero-copy-usp {
+        display: flex;
+        flex-direction: row;
+        column-gap: 64px;
+        // justify-content: space-between;
+        color: $white-text;
+        padding-bottom: 24px;
+        position: relative;
+        z-index: 2;
+
+        .h6.heading {
+          position: relative;
+          z-index: 2;
+
+          svg {
+            margin-right: 16px;
+            z-index: 2;
+            position: relative;
+            right: -6px;
+          }
+        }
+      }
+
+      .hero-copy-cta {
+        padding-top: 32px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+
+        button.btn {
+          @include font(16px, 22px, 500);
+          text-transform: uppercase;
+          border-radius: 8px;
+          padding: 8px 16px;
+          
+          &.custom-primary-button {
+            background-color: $white-text;
+            color: $primary-color;
+            border: $white-text solid 2px;
+          }
+          
+          &.custom-secondary-button {
+            background-color: transparent;
+            color: $white-text;
+            border: $white-text solid 2px;
+          }
+        }
+      }
+    }
+  }
 }

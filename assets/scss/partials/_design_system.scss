@@ -1,0 +1,135 @@
+// Theme Colors
+$primary-color: #673ab7;
+$primary-light1: #8561c5;
+$primary-light2: #a489d4;
+$primary-light3: #c2b0e2;
+$primary-light4: #e1d8f1;
+$primary-dark1: #522e92;
+$primary-dark2: #3e236e;
+$primary-dark3: #291749;
+$primary-dark4: #150c25;
+$secondary-color: #009688;
+$secondary-light1: #33aba0;
+$secondary-light2: #66c0b8;
+$secondary-light3: #99d5cf;
+$secondary-light4: #cceae7;
+$secondary-dark1: #00786d;
+$secondary-dark2: #005a52;
+$secondary-dark3: #003c36;
+$secondary-dark4: #001e1b;
+$tertiary-color: #ffcc33;
+$tertiary-light1: #ffd65c;
+$tertiary-light2: #ffe085;
+$tertiary-light3: #ffebad;
+$tertiary-light4: #fff5d6;
+$tertiary-dark1: #cca329;
+$tertiary-dark2: #997a1f;
+$tertiary-dark3: #665214;
+$tertiary-dark4: #33290a;
+
+// Text Colors
+$primary-text: #242933;
+$secondary-text: #767676;
+$white-text: #f8f4e3;
+
+// Base Colors
+$white: #ffffff;
+$black: #000000;
+
+$grey: #7b858f;
+$grey-light1: #a3aab1;
+$grey-light2: #caced2;
+$grey-dark1: #565d64;
+$grey-dark2: #313539;
+
+$success: #73d82f;
+$danger: #f41707;
+$warning: #ffb200;
+$information: #38b6ff;
+
+// Typography
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$type-font-size: 16px;
+$type-scale-ratio: 1.25;
+
+@mixin WorkSans {
+  font-family: "Work Sans", sans-serif;
+}
+
+body.body-wrapper {
+  @include WorkSans;
+  font-size: $type-font-size;
+  line-height: 1.4;
+  font-weight: 400;
+  color: $primary-text;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@mixin font($fontSize, $lineHeight, $fontWeight) {
+  font-family: "Work Sans", sans-serif;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+.large-text {
+  @include font(118px, 142px, 700);
+}
+
+.big-text {
+  @include font(96px, 116px, 700);
+}
+
+.h1 {
+  @include font(78px, 98px, 700);
+}
+
+.h2 {
+  @include font(62px, 78px, 700);
+}
+
+.h3 {
+  @include font(48px, 60px, 700);
+}
+
+.h4 {
+  @include font(39px, 1.4, 600);
+}
+
+.h5.heading {
+  @include font(30px, 1.4, 600);
+}
+
+.h5.body {
+  @include font(30px, 1.4, 400);
+}
+
+.h6.heading {
+  @include font(22px, 1.4, 600);
+}
+
+.h6.body {
+  @include font(22px, 1.4, 400);
+}
+
+.paragraph-text {
+  @include font(16px, 22px, 400);
+  color: $primary-text;
+}
+
+.small-text {
+  @include font(12px, 16px, 700);
+}
+
+.tiny-text {
+  @include font(10px, 14px, 700);
+}
+
+// Vendor Prefixes
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
